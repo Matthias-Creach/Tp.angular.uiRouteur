@@ -1,0 +1,27 @@
+{
+  "name": "tp_angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-copy-file": "/bin/cp -f static/index.html dist/index.html",
+    "build": "browserify js/index.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "watch": "watchify js/index.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ]"
+  },
+  "author": "Matthias",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "angular-translate-interpolation-messageformat": "~2.11.0",
+    "angular-ui-router": "~0.3.0",
+    "angular-translate": "~2.11.0",
+    "angular": "~1.5.5",
+    "messageformat": "~0.3.1",
+    "restangular": "~1.5.2"
+  },
+  "devDependencies": {
+    "watchify": "~3.7.0",
+    "browserify": "~13.0.1",
+    "babelify": "~7.3.0",
+    "babel-preset-es2015": "~6.9.0"
+  }
+}
